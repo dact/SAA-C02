@@ -3,6 +3,7 @@
   <html lang="en">
   <body>
   <script src="https://unpkg.com/gojs@2.2.5/release/go.js"></script>
+  <script type="text/javascript" src="saa-c02.js"></script>
   <p>
     This is a minimalist HTML and JavaScript skeleton of the GoJS Sample
     <a href="https://gojs.net/latest/samples/mindMap.html">mindMap.html</a>. It was automatically generated from a button on the sample page,
@@ -300,6 +301,7 @@
       myDiagram.isModified = false;
     }
     function load() {
+      document.getElementById("mySavedModel").innerHTML = nodeDataArrayCom;
       myDiagram.model = go.Model.fromJson(document.getElementById("mySavedModel").value);
     }
     window.addEventListener('DOMContentLoaded', init);
